@@ -1,0 +1,6 @@
+expname = train_1_head
+datadir = /content/drive/My Drive/cs6323-project/AD-NeRF/dataset/train_1
+basedir = /content/drive/My Drive/cs6323-project/AD-NeRF/dataset/train_1/logs
+near = nan
+far = nan
+testskip = 23

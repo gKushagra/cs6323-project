@@ -1,0 +1,7 @@
+expname = train_1_com
+datadir = /content/drive/My Drive/cs6323-project/AD-NeRF/dataset/train_1
+basedir = /content/drive/My Drive/cs6323-project/AD-NeRF/dataset/train_1/logs
+near = nan
+far = nan
+with_test = 1
+test_pose_file = transforms_val.json

@@ -1,0 +1,7 @@
+expname = Obama_3_com
+datadir = /content/drive/My Drive/cs6323-project/AD-NeRF/dataset/Obama_3
+basedir = /content/drive/My Drive/cs6323-project/AD-NeRF/dataset/Obama_3/logs
+near = 0.7115188121795655
+far = 1.3115188121795653
+with_test = 1
+test_pose_file = transforms_val.json
