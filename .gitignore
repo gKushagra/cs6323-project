@@ -25,3 +25,4 @@
 
 /data_util/face_tracking/3DMM/01_MorphableModel.mat
 /data_util/face_tracking/3DMM/3DMM_info.npy
+/data_util/face_parsing/79999_iter.pth
