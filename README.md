@@ -1,11 +1,58 @@
-# AD-NeRF: Audio Driven Neural Radiance Fields for Talking Head Synthesis
+# CS 6323 Project
+
+## Team Members
+
+- Pragathi Ilango
+- Kushagra Gupta
+
+## Google Drive Link
+
+[cs6323-Drive-Link](https://drive.google.com/drive/folders/1fotM5B_0SIDXG4iN8f2JMMh4upEcIhoG?usp=sharing)
+
+It was not possible to upload the assets to Github Repository, so we have included a link to the Drive that we mounted on our Google Collab notebook.
+
+## Files of interest in this repository
+
+### Datasets
+
+- dataset/vids
+
+### Google Collab Notebook
+- cs6323_project.ipynb
+
+### Reconstructed videos [Results]
+
+- Obama_1_Reconstructed_Exp1.avi
+- Obama_1_Reconstructed_Exp3.avi
+
+### Logs from data pre-process, train, and test
+
+- dataset/Obama_1
+- dataset/Obama_3
+- dataset/train_1
+
+### Used from Authors Github Repository
+
+- NeRFs
+- data_util
+- dataset/vids/Obama.mp4
+- environment.yml
+- process_data.sh
+
+
+
+# Author's Github repository
+
+[YudongGuo/AD-NeRF](https://github.com/YudongGuo/AD-NeRF)
+
+## AD-NeRF: Audio Driven Neural Radiance Fields for Talking Head Synthesis
 
 ![](paper_data/pipeline.png)
 
 PyTorch implementation for the paper "[AD-NeRF: Audio Driven Neural Radiance Fields for Talking Head Synthesis (ICCV 2021)](https://arxiv.org/abs/2103.11078)".<br/>
 Authors: [Yudong Guo](https://yudongguo.github.io/), [Keyu Chen](http://kychern.github.io/), [Sen Liang](https://scholar.google.com/citations?user=Yv_olnAAAAAJ&hl), [Yong-Jin Liu](https://cg.cs.tsinghua.edu.cn/people/~Yongjin/Yongjin.htm), [Hujun Bao](http://www.cad.zju.edu.cn/home/bao/) and [Juyong Zhang](http://staff.ustc.edu.cn/~juyong/).
 
-## Prerequisites
+### Prerequisites
 - You can create an anaconda environment called adnerf with:
     ```
     conda env create -f environment.yml
@@ -24,7 +71,7 @@ Authors: [Yudong Guo](https://yudongguo.github.io/), [Keyu Chen](http://kychern.
     ```
     python convert_BFM.py
     ```
-## Train AD-NeRF
+### Train AD-NeRF
 - Data Preprocess ($id Obama for example)
     ```
     bash process_data.sh Obama
@@ -43,7 +90,7 @@ Authors: [Yudong Guo](https://yudongguo.github.io/), [Keyu Chen](http://kychern.
         python NeRFs/TorsoNeRF/run_nerf.py --config dataset/$id/TorsoNeRF_config.txt
         ```
     - You may need the [pretrained models](https://github.com/YudongGuo/AD-NeRF/tree/master/pretrained_models) to avoid bad initialization. [#3](https://github.com/YudongGuo/AD-NeRF/issues/3)
-## Run AD-NeRF for rendering
+### Run AD-NeRF for rendering
 - Reconstruct original video with audio input
     ```
     python NeRFs/TorsoNeRF/run_nerf.py --config dataset/$id/TorsoNeRFTest_config.txt --aud_file=dataset/$id/aud.npy --test_size=300
@@ -53,7 +100,7 @@ Authors: [Yudong Guo](https://yudongguo.github.io/), [Keyu Chen](http://kychern.
     python NeRFs/TorsoNeRF/run_nerf.py --config dataset/$id/TorsoNeRFTest_config.txt --aud_file=${deepspeechfile.npy} --test_size=-1
     ```
 
-## Citation
+### Citation
 
 If you find our work useful in your research, please consider citing our paper:
 
@@ -68,5 +115,5 @@ If you find our work useful in your research, please consider citing our paper:
 
 If you have questions, feel free to contact <gyd2011@mail.ustc.edu.cn>.
 
-## Acknowledgments
+### Acknowledgments
 We use [face-parsing.PyTorch](https://github.com/zllrunning/face-parsing.PyTorch) for parsing head and torso maps, and [DeepSpeech](https://github.com/mozilla/DeepSpeech) for audio feature extraction. The NeRF model is implemented based on [NeRF-pytorch](https://github.com/yenchenlin/nerf-pytorch).
